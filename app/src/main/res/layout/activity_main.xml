@@ -11,6 +11,16 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:layout_marginHorizontal="16dp"
+        android:text="@string/use_compass" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="300dp"

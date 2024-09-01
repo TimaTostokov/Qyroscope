@@ -6,8 +6,10 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +42,20 @@ public class MainActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.tv_textView);
         imageView = findViewById(R.id.imageView);
+        Button button = findViewById(R.id.button_next);
         manager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+
+        button.setOnClickListener(v -> {
+
+            CompassFragment compassFragment = new CompassFragment();
+
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.container, compassFragment)
+                    .addToBackStack(null)
+                    .commit();
+
+            Toast.makeText(MainActivity.this, "Button Clicked!", Toast.LENGTH_SHORT).show();
+        });
 
         if (manager != null) sensor = manager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
 
@@ -71,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
+                //TODO
             }
         };
     }
