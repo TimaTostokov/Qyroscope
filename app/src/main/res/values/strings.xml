@@ -5,4 +5,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="use_compass">Use Compass</string>
     <string name="heading_0_0">Heading :0.0</string>
+    <string name="_0">0</string>
+    <string name="_5T">/25000</string>
 </resources>

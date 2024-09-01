@@ -1,5 +1,6 @@
 [versions]
-agp = "8.5.0"
+agp = "8.5.2"
+circularprogressbar = "2.0.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -7,9 +8,10 @@ appcompat = "1.7.0"
 material = "1.12.0"
 activity = "1.9.1"
 constraintlayout = "2.1.4"
-kotlin = "1.9.0"
+kotlin = "1.9.23"
 
 [libraries]
+circularprogressbar = { module = "com.github.mikhaellopez:circularprogressbar", version.ref = "circularprogressbar" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

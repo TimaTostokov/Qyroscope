@@ -28,8 +28,8 @@ class CompassFragment : Fragment(R.layout.fragment_compass), SensorEventListener
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         sensorManager = requireContext().getSystemService(Context.SENSOR_SERVICE) as SensorManager
+
         tvHeading = view.findViewById(R.id.tv_header)
         image = view.findViewById(R.id.img_compass)
     }
@@ -60,11 +60,10 @@ class CompassFragment : Fragment(R.layout.fragment_compass), SensorEventListener
         rotation.fillAfter = true
         image?.startAnimation(rotation)
         currentDegree = -degree.toFloat()
-
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
-        //TODO
+        return
     }
 
     override fun onPause() {

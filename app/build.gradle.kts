@@ -37,6 +37,8 @@ android {
 
 dependencies {
 
+    implementation (libs.circularprogressbar)
+
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

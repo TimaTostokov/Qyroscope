@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onAccuracyChanged(Sensor sensor, int accuracy) {
-                //TODO
+                return;
             }
         };
     }
